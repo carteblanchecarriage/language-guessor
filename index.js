@@ -11,7 +11,7 @@ const input = process.argv[2];
 const langCode = langs.where("3", franc(input));
 
 if (langCode === undefined) {
-    console.log('error'.red)
+    console.log('Cannot determine the language, try a longer sample text'.red)
 } else {
     const language = langCode.name;
     const response = `${language} is most likely the language`;
